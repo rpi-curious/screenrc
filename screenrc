@@ -1,0 +1,29 @@
+## Internet says never to switch it off
+autodetach on
+
+## Silence any splash
+startup_message off
+
+## Occupy last line of terminal
+hardstatus alwayslastline
+
+## Change if not utilizing Bash
+shelltitle 'bash'
+
+## Allow mouse scrolling action
+terminfo xterm*|rxvt ti@:te@
+
+## Allow bold colors
+attrcolor b ".I"
+
+backtick 1 5 10 "${HOME}/.screenrc-scripts/cpu-temp.sh"
+backtick 2 5 15 "${HOME}/.screenrc-scripts/free-mem.sh"
+backtick 3 9999999 9999999 "${HOME}/.screenrc-scripts/user.sh"
+backtick 4 3600 3600 "${HOME}/.screenrc-scripts/free-disk.sh"
+
+## Backticks
+#	 1	ID to use within hardstatus or caption strings, eg: %1`
+#	   5	Seconds that script output is valid for
+#	     10	Seconds till forced update of script output
+
+hardstatus string '%{b kw}%1` %{c}%3`@%H %{y}%S %{r}|%{w} %=%{r}|%{w} %2` %4` %{r}|%{w} %Y/%m/%d %c'
