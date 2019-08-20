@@ -60,6 +60,20 @@ ln -s "${HOME}/git/rpi-curious/screenrc/screenrc-scripts" "${HOME}/.screenrc-scr
 ```
 
 
+Starting a **new** `screen` session should something similar to...
+
+
+```
+screen -RD ssh
+
+
+53c pi@raspberrypi ssh |   | Free Mem: 59% Swap: 83% Disk: 72% | 2019/08/15 10:57
+```
+
+
+... along the bottom of the terminal window.
+
+
 **Updating**
 
 
